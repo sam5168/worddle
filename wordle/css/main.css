@@ -1,0 +1,43 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding-top: 40px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.board-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #d3d6da;
+  width: 60px;
+  height: 60px;
+}
+
+/* 정답일경우 애니메이션 추가 */
+@keyframes correct-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.correct-animation {
+  animation: correct-animation 1s ease-in-out;
+}
